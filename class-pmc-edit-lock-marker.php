@@ -6,7 +6,7 @@
  * @author Amit Gupta
  * 
  * @since 2012-07-02 Amit Gupta
- * @version 2012-07-13 Amit Gupta
+ * @version 2012-07-20 Amit Gupta
  */
 
 class PMC_Edit_Lock_Marker {
@@ -50,15 +50,10 @@ class PMC_Edit_Lock_Marker {
 			return false;
 		}
 		
-		//register stylesheet
-		wp_register_style( self::plugin_id, plugins_url('styles/pmc-edit-lock-marker.css', __FILE__), false );
-		//register script
-		wp_register_script( self::plugin_id, plugins_url('js/pmc-edit-lock-marker.js', __FILE__), array('jquery') );
-		
 		//load stylesheet
-		wp_enqueue_style( self::plugin_id );
+		wp_enqueue_style( self::plugin_id, plugins_url('styles/pmc-edit-lock-marker.css', __FILE__), false );
 		//load script
-		wp_enqueue_script( self::plugin_id );
+		wp_enqueue_script( self::plugin_id, plugins_url('js/pmc-edit-lock-marker.js', __FILE__), array('jquery') );
 		
 		wp_localize_script( self::plugin_id, 'pmc_edit_lock_marker', array(
 			'nonce' => wp_create_nonce(self::plugin_id . '-nonce')
@@ -109,7 +104,7 @@ class PMC_Edit_Lock_Marker {
 	public function fetch_locked_posts() {
 		check_ajax_referer(self::plugin_id . '-nonce', '_pmc_elm_ajax_nonce');
 		$post_ids = ( isset($_POST['post_ids']) && ! empty($_POST['post_ids']) ) ? explode( ',', sanitize_text_field($_POST['post_ids']) ) : array();
-		if ( empty($post_ids) || !is_array($post_ids) || ! current_user_can( 'edit_posts' ) ) {
+		if ( empty($post_ids) || ! is_array($post_ids) || ! current_user_can( 'edit_posts' ) ) {
 			die();	//used die() instead of wp_die() as it prints -1 in AJAX output which screws up the data format
 		}
 		
