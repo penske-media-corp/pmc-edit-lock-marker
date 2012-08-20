@@ -4,6 +4,7 @@ Tags: post lock
 Requires at least: 3.2
 Tested up to: 3.4.1
 Stable tag: trunk
+License: GPLv2
 
 A plugin to mark the posts on wp-admin/edit.php page which are currently being edited by other users.
 
