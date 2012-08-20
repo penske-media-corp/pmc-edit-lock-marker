@@ -10,7 +10,9 @@ A plugin to mark the posts on wp-admin/edit.php page which are currently being e
 
 == Description ==
 
-If a post is being edited by another user, you get to know about it only when you open that particular post and the chances of accidentally overwriting the other user's changes are there. This plugin will show you the posts that are being edited by other user(s) right on the post listing page in wp-admin without you having to open a post to find that out, thus removing any chance of you overwriting other user's changes.
+If a post is being edited by another user, you get to know about it only when you open that particular post and the chances of accidentally overwriting the other user's changes are there.
+
+This plugin will highlight the posts that are being edited by other user(s) right on the post listing page in wp-admin without you having to open a post to find that out, thus removing any chance of you overwriting other user's changes.
 
 Github: https://github.com/Penske-Media-Corp/pmc-edit-lock-marker
 
