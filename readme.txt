@@ -2,7 +2,7 @@
 Contributors: pmcdotcom, amit
 Tags: post lock
 Requires at least: 3.2
-Tested up to: 3.4.1
+Tested up to: 3.5
 Stable tag: trunk
 License: GPLv2
 
@@ -16,7 +16,7 @@ This plugin will highlight the posts that are being edited by other user(s) righ
 
 Github: https://github.com/Penske-Media-Corp/pmc-edit-lock-marker
 
-WordPress.org plugin repository: http://wordpress.org/extend/plugins/pmc-edit-lock-marker/
+WordPress.org plugin repo: http://plugins.svn.wordpress.org/pmc-edit-lock-marker/
 
 
 == Installation ==
